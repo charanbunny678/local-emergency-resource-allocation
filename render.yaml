@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: lercs-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: JWT_SECRET
+        value: "lercs-cloud-jwt-secret-key-32-characters-or-more-1234567890"
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: LERCS_SEED_PASSWORD
+        value: "Admin@12345"
