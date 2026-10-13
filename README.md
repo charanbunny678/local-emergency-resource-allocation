@@ -2,6 +2,10 @@
 
 LERCS is a role based web application for local coordination of emergency reports, responders, supplies, shelters, hospitals, and community announcements. It supports information management and does not replace official emergency services.
 
+> 🚀 **Live Application:** [https://local-emergency-resource-allocation.vercel.app](https://local-emergency-resource-allocation.vercel.app)  
+> 📖 **Backend API & Swagger UI:** [https://local-emergency-resource-allocation-3.onrender.com/swagger-ui.html](https://local-emergency-resource-allocation-3.onrender.com/swagger-ui.html)
+
+
 ## Features
 
 - Citizen registration, sign in, JWT sessions, and role aware navigation.
