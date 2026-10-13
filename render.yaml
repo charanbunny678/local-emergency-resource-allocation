@@ -14,3 +14,13 @@ services:
         value: "*"
       - key: LERCS_SEED_PASSWORD
         value: "Admin@12345"
+      - key: DB_DRIVER
+        value: "com.mysql.cj.jdbc.Driver"
+      - key: DB_URL
+        value: "jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/emergency_resource_coordination?sslMode=VERIFY_IDENTITY&serverTimezone=UTC"
+      - key: DB_USERNAME
+        value: "3E9bsFTSR152noq.root"
+      - key: DB_PASSWORD
+        value: "pWeNRd5RALHiEkTD"
+      - key: DDL_AUTO
+        value: "update"
