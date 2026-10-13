@@ -1,4 +1,3 @@
- HEAD
 # Local Emergency Resource Coordination System (LERCS)
 
 LERCS is a role based web application for local coordination of emergency reports, responders, supplies, shelters, hospitals, and community announcements. It supports information management and does not replace official emergency services.
@@ -118,5 +117,3 @@ Passwords are BCrypt hashed and omitted from JSON. JWT secrets and database cred
 ## Future enhancements
 
 Incident locations on the map and distance based responder matching; email/SMS gateway integration; automated migration management; fine-grained user administration; offline/PWA workflows; and richer dashboard reports.
-# local-emergency-resource-allocation
- ebb482895817023d488dacc65314b0bc13e6f8da
