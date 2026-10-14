@@ -45,7 +45,7 @@ class Errors {
  @ExceptionHandler(org.springframework.web.bind.MethodArgumentNotValidException.class) ResponseEntity<ErrorResponse> validation(org.springframework.web.bind.MethodArgumentNotValidException e){Map<String,String> m=new LinkedHashMap<>();e.getBindingResult().getFieldErrors().forEach(x->m.put(x.getField(),x.getDefaultMessage()));return ResponseEntity.badRequest().body(new ErrorResponse(false,"Validation failed",m,Instant.now()));}
  @ExceptionHandler(AccessDeniedException.class) ResponseEntity<ErrorResponse> forbidden(AccessDeniedException e){return ResponseEntity.status(403).body(new ErrorResponse(false,"Access denied",Map.of(),Instant.now()));}
  @ExceptionHandler({IllegalArgumentException.class,org.springframework.dao.DataIntegrityViolationException.class}) ResponseEntity<ErrorResponse> bad(RuntimeException e){return ResponseEntity.badRequest().body(new ErrorResponse(false,e instanceof IllegalArgumentException?e.getMessage():"The request conflicts with existing data",Map.of(),Instant.now()));}
- @ExceptionHandler(Exception.class) ResponseEntity<ErrorResponse> generic(Exception e){return ResponseEntity.internalServerError().body(new ErrorResponse(false,"An unexpected error occurred",Map.of(),Instant.now()));}
+ @ExceptionHandler(Exception.class) ResponseEntity<ErrorResponse> generic(Exception e){e.printStackTrace();return ResponseEntity.internalServerError().body(new ErrorResponse(false,e.getMessage()!=null&&!e.getMessage().isBlank()?e.getMessage():"An unexpected error occurred",Map.of(),Instant.now()));}
 }
 
 @RestController @RequestMapping("/api/auth")
